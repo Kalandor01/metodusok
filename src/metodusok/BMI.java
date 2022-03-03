@@ -34,10 +34,16 @@ public class BMI
         System.out.printf("Ön %s cm magas és %s kg tömegű ", mag, suly);
         System.out.printf(Locale.ENGLISH, "így BMI indexe %.1f\n", bmi);
         String result = "";
-        if(bmi>0)
+        if(bmi>35.0)
+            result = "károsan elhízott";
+        else if(bmi>30.0)
+            result = "elhízott";
+        else if(bmi>25)
             result = "túlsúlyos";
+        else if(bmi>20)
+            result = "normál";
         else
-            result = "vékony";
+            result = "nagyon sovány";
         System.out.printf("Tehát ön %s testalkatú.\n", result);
     }
     
